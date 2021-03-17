@@ -528,7 +528,7 @@ proxy-groups:
     interval: 300
     use:
       - nl
-  - name: - 🇪🇸 Spain
+  - name: 🇪🇸 Spain
     type: url-test
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
