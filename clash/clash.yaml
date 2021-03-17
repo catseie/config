@@ -283,9 +283,17 @@ proxy-providers:
       enable: true
       interval: 600
       url: http://www.gstatic.com/generate_204
+  es:
+    type: http
+    url: "https://proxypoolss.tk/clash/proxies?c=ES&speed=30&type=ss,vmess,trojan"
+    path: proxypoolss.tk/provider-es.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
   others:
     type: http
-    url: "https://proxypoolss.tk/clash/proxies?nc=CN,HK,TW,US,CA,JP,SG,AU,CH,DE,GB,NL,FR,RU&speed=30&type=ss,vmess,trojan"
+    url: "https://proxypoolss.tk/clash/proxies?nc=CN,HK,TW,US,CA,JP,SG,AU,CH,DE,GB,NL,FR,RU,ES&speed=30&type=ss,vmess,trojan"
     path: proxypoolss.tk/provider-others.yaml
     health-check:
       enable: true
@@ -379,6 +387,7 @@ proxy-groups:
       - 🇫🇷 France
       - 🇬🇧 England
       - 🇳🇱 Netherlands
+      - 🇪🇸 Spain
       - Others
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
@@ -397,6 +406,7 @@ proxy-groups:
       - 🇫🇷 France
       - 🇬🇧 England
       - 🇳🇱 Netherlands
+      - 🇪🇸 Spain
       - Others
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
@@ -415,6 +425,7 @@ proxy-groups:
       - 🇫🇷 France
       - 🇬🇧 England
       - 🇳🇱 Netherlands
+      - 🇪🇸 Spain
       - Others
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
@@ -442,6 +453,7 @@ proxy-groups:
       - 🇫🇷 France
       - 🇬🇧 England
       - 🇳🇱 Netherlands
+      - 🇪🇸 Spain
       - Others
       
   - name: 🇨🇳 China
@@ -516,6 +528,12 @@ proxy-groups:
     interval: 300
     use:
       - nl
+  - name: - 🇪🇸 Spain
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+    use:
+      - es
   - name: Others
     type: url-test
     url: 'http://www.gstatic.com/generate_204'
