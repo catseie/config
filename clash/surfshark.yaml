@@ -186,6 +186,9 @@ proxy-providers:
   #     enable: true
   #     interval: 600
   #     url: http://www.gstatic.com/generate_204
+  
+  
+  # https://github.com/clashconfig/online/blob/main/SurfShark(44236).yml
 
   cn:
     type: http
