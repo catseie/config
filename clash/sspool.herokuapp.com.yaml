@@ -189,7 +189,7 @@ proxy-providers:
 
   cn:
     type: http
-    url: "https://sspool.herokuapp.com/clash/proxies?c=CN,HK,TW,MO&speed=5&type=ss,vmess,trojan"
+    url: "https://sspool.herokuapp.com/clash/proxies?c=CN,HK,TW,MO&speed=1&type=ss,ssr,vmess,trojan"
     path: sspool.herokuapp.comss.tk/provider-cn.yaml
     health-check:
       enable: true
@@ -197,7 +197,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
   us:
     type: http
-    url: "https://sspool.herokuapp.com/clash/proxies?c=US&speed=5&type=ss,vmess,trojan"
+    url: "https://sspool.herokuapp.com/clash/proxies?c=US&speed=1&type=ss,ssr,vmess,trojan"
     path: sspool.herokuapp.comss.tk/provider-us.yaml
     health-check:
       enable: true
@@ -205,7 +205,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
   ca:
     type: http
-    url: "https://sspool.herokuapp.com/clash/proxies?c=CA&speed=5&type=ss,vmess,trojan"
+    url: "https://sspool.herokuapp.com/clash/proxies?c=CA&speed=1&type=ss,ssr,vmess,trojan"
     path: sspool.herokuapp.comss.tk/provider-ca.yaml
     health-check:
       enable: true
@@ -213,7 +213,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
   jp:
     type: http
-    url: "https://sspool.herokuapp.com/clash/proxies?c=JP&speed=2&type=ss,vmess,trojan"
+    url: "https://sspool.herokuapp.com/clash/proxies?c=JP&speed=1&type=ss,ssr,vmess,trojan"
     path: sspool.herokuapp.comss.tk/provider-jp.yaml
     health-check:
       enable: true
@@ -221,7 +221,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
   sg:
     type: http
-    url: "https://sspool.herokuapp.com/clash/proxies?c=SG&speed=2&type=ss,vmess,trojan"
+    url: "https://sspool.herokuapp.com/clash/proxies?c=SG&speed=1&type=ss,ssr,vmess,trojan"
     path: sspool.herokuapp.comss.tk/provider-sg.yaml
     health-check:
       enable: true
@@ -229,7 +229,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
   ar:
     type: http
-    url: "https://sspool.herokuapp.com/clash/proxies?c=AR&speed=0&type=ss,ssr,vmess,trojan"
+    url: "https://sspool.herokuapp.com/clash/proxies?c=AR&type=ss,ssr,vmess,trojan"
     path: sspool.herokuapp.comss.tk/provider-ar.yaml
     health-check:
       enable: true
@@ -237,7 +237,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
   tr:
     type: http
-    url: "https://sspool.herokuapp.com/clash/proxies?c=TR&speed=0&type=ss,ssr,vmess,trojan"
+    url: "https://sspool.herokuapp.com/clash/proxies?c=TR&type=ss,ssr,vmess,trojan"
     path: sspool.herokuapp.comss.tk/provider-tr.yaml
     health-check:
       enable: true
@@ -245,7 +245,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
   au:
     type: http
-    url: "https://sspool.herokuapp.com/clash/proxies?c=AU&speed=2&type=ss,vmess,trojan"
+    url: "https://sspool.herokuapp.com/clash/proxies?c=AU&speed=1&type=ss,ssr,vmess,trojan"
     path: sspool.herokuapp.comss.tk/provider-au.yaml
     health-check:
       enable: true
@@ -253,7 +253,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
   ru:
     type: http
-    url: "https://sspool.herokuapp.com/clash/proxies?c=RU&speed=0&type=ss,vmess,trojan"
+    url: "https://sspool.herokuapp.com/clash/proxies?c=RU&type=ss,ssr,vmess,trojan"
     path: sspool.herokuapp.comss.tk/provider-ru.yaml
     health-check:
       enable: true
@@ -261,7 +261,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
   ch:
     type: http
-    url: "https://sspool.herokuapp.com/clash/proxies?c=CH&speed=0&type=ss,vmess,trojan"
+    url: "https://sspool.herokuapp.com/clash/proxies?c=CH&speed=0&type=ss,ssr,vmess,trojan"
     path: sspool.herokuapp.comss.tk/provider-ch.yaml
     health-check:
       enable: true
@@ -309,7 +309,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
   others:
     type: http
-    url: "https://sspool.herokuapp.com/clash/proxies?nc=CN,HK,TW,US,CA,JP,SG,AU,CH,DE,GB,NL,FR,RU,ES,TR,AR&speed=10&type=ss,vmess,trojan"
+    url: "https://sspool.herokuapp.com/clash/proxies?nc=CN,HK,TW,US,CA,JP,SG,AU,CH,DE,GB,NL,FR,RU,ES,TR,AR&speed=5&type=ss,ssr,vmess,trojan"
     path: sspool.herokuapp.comss.tk/provider-others.yaml
     health-check:
       enable: true
@@ -317,7 +317,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
   all:
     type: http
-    url: "https://sspool.herokuapp.com/clash/proxies?nc=CN&speed=15&type=ss,ssr,vmess,trojan"
+    url: "https://sspool.herokuapp.com/clash/proxies?nc=CN&speed=10&type=ss,ssr,vmess,trojan"
     path: sspool.herokuapp.comss.tk/provider.yaml
     health-check:
       enable: true
