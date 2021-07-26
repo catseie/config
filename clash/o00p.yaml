@@ -1,0 +1,550 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  ipv6: false
+  listen: 0.0.0.0:53
+  enhanced-mode: redir-host
+  default-nameserver:
+    - 114.114.114.114 # default value#
+    - 8.8.8.8 # default value#
+    - 223.5.5.5 
+    - 119.29.29.29
+    - 1.1.1.1
+  nameserver:
+    - https://dns.pub/dns-query
+    - https://dns.alidns.com/dns-query
+    - tls://dns.rubyfish.cn:853 # DNS over TLS
+    #- 114.114.114.114
+    - tls://dns.adguard.com:853
+  fallback:
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.google/dns-query
+    - https://doh.opendns.com/dns-query
+    #- https://1.1.1.1/dns-query # DNS over HTTPS
+    #- tls://dns.rubyfish.cn:853 # DNS over TLS
+    #- tls://dns.adguard.com:853
+    - dns.nextdns.io
+  fallback-filter:
+    geoip: true
+    ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/32
+      # domain:
+      #   - '+.google.com'
+      #   - '+.facebook.com'
+      #   - '+.youtube.com'   
+
+proxies:
+  - name: 🇺🇲 qn
+    server: 172.86.124.16
+    port: 88
+    type: ss
+    cipher: xchacha20-ietf-poly1305
+    password: password@
+    udp: true
+  - name: 🇺🇲 s3
+    server: 185.250.221.106
+    port: 88
+    type: ss
+    cipher: xchacha20-ietf-poly1305
+    password: password@
+    udp: true
+  - name: 🇺🇲 s2
+    server: 173.82.210.82
+    port: 88
+    type: ss
+    cipher: xchacha20-ietf-poly1305
+    password: password@
+    udp: true
+  - name: 🇺🇲 s12
+    server: 103.124.104.111
+    port: 88
+    type: ss
+    cipher: xchacha20-ietf-poly1305
+    password: password@
+    udp: true
+  - name: 🇺🇲 mc
+    server: 173.82.202.177
+    port: 88
+    type: ss
+    cipher: xchacha20-ietf-poly1305
+    password: password@
+    udp: true
+  - name: 🇺🇲 s3-US
+    server: s3.520guge.com
+    port: 443
+    type: trojan
+    password: 2d0dd82f
+    sni: s3.520guge.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇲 s9-US
+    server: s9.520guge.com
+    port: 443
+    type: trojan
+    password: o00pxyz
+    sni: s9.520guge.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇲 s12-US
+    server: s12.520guge.com
+    port: 443
+    type: trojan
+    password: 8681f824
+    sni: s12.520guge.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇲 s2-US
+    server: s2.520guge.com
+    port: 443
+    type: trojan
+    password: "2013198792"
+    sni: s2.520guge.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇲 qn-US
+    server: qn.520guge.com
+    port: 443
+    type: trojan
+    password: g9idj4fidn
+    sni: qn.520guge.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇦🇷 AR Buenos Aires
+    server: 91.206.168.64
+    port: 44236
+    type: ss
+    cipher: aes-256-gcm
+    password: FWrXcxPZjJxAN89xLgqY3Acp
+    udp: true
+  - name: 🇧🇷 BR Sao Paulo
+    server: 191.96.13.212
+    port: 44236
+    type: ss
+    cipher: aes-256-gcm
+    password: FWrXcxPZjJxAN89xLgqY3Acp
+    udp: true
+  - name: 🇹🇷 TR Istanbul
+    server: 107.150.95.149
+    port: 44236
+    type: ss
+    cipher: aes-256-gcm
+    password: FWrXcxPZjJxAN89xLgqY3Acp
+    udp: true
+  - name: 🇹🇷 TR Bursa
+    server: 185.195.79.21
+    port: 44236
+    type: ss
+    cipher: aes-256-gcm
+    password: FWrXcxPZjJxAN89xLgqY3Acp
+    udp: true
+  - name: 🇷🇺 RU Moscow
+    server: 92.38.138.135
+    port: 44236
+    type: ss
+    cipher: aes-256-gcm
+    password: FWrXcxPZjJxAN89xLgqY3Acp
+    udp: true
+  - name: 🇷🇺 RU St. Petersburg
+    server: 188.92.78.203
+    port: 44236
+    type: ss
+    cipher: aes-256-gcm
+    password: FWrXcxPZjJxAN89xLgqY3Acp
+    udp: true
+  - name: US 🇺🇸 Dallas 2
+    server: 89.187.175.167
+    port: 44236
+    type: ss
+    cipher: aes-256-gcm
+    password: FWrXcxPZjJxAN89xLgqY3Acp
+    udp: true
+  - name: http1
+    type: http
+    server: 200.127.151.109
+    port: 80
+  - name: http2
+    type: http
+    server: 88.255.65.117
+    port: 999
+  - name: socks
+    type: socks5
+    server: 78.189.231.24
+    port: 1080
+
+proxy-groups:
+  - name: MATCH
+    type: select
+    proxies:
+      - Proxy
+      - DIRECT
+
+  - name: Proxy
+    type: select
+    proxies:
+      - Fallback
+      - AutoTest
+      - Load-balance
+      - 🇺🇲 qn
+      - 🇺🇲 s3
+      - 🇺🇲 s2
+      - 🇺🇲 s12
+      - 🇺🇲 mc
+      - 🇺🇲 s3-US
+      - 🇺🇲 s9-US
+      - 🇺🇲 s12-US
+      - 🇺🇲 s2-US
+      - 🇺🇲 qn-US
+      - Relay1
+      - Relay2
+      - Relay3
+      - 🇦🇷 AR Buenos Aires
+      - 🇧🇷 BR Sao Paulo
+      - 🇹🇷 TR Istanbul
+      - 🇹🇷 TR Bursa
+      - 🇷🇺 RU Moscow
+      - 🇷🇺 RU St. Petersburg
+      - http1
+      - socks
+
+  - name: Streaming
+    type: select
+    proxies:
+      - Proxy
+      - AutoTest
+      - 🇺🇲 qn
+      - 🇺🇲 s3
+      - 🇺🇲 s2
+      - 🇺🇲 s12
+      - 🇺🇲 mc
+      - 🇺🇲 s3-US
+      - 🇺🇲 s9-US
+      - 🇺🇲 s12-US
+      - 🇺🇲 s2-US
+      - 🇺🇲 qn-US
+  - name: StreamingSE
+    type: select
+    proxies:
+      - DIRECT
+      - Proxy
+      - 🇺🇲 qn
+      - 🇺🇲 s3
+      - 🇺🇲 s2
+      - 🇺🇲 s12
+      - 🇺🇲 mc
+      - 🇺🇲 s3-US
+      - 🇺🇲 s9-US
+      - 🇺🇲 s12-US
+      - 🇺🇲 s2-US
+      - 🇺🇲 qn-US
+  - name: Paypal
+    type: select
+    proxies:
+      - DIRECT
+      - Proxy
+      - 🇺🇲 qn
+      - 🇺🇲 s3
+      - 🇺🇲 s2
+      - 🇺🇲 s12
+      - 🇺🇲 mc
+      - 🇺🇲 s3-US
+      - 🇺🇲 s9-US
+      - 🇺🇲 s12-US
+      - 🇺🇲 s2-US
+      - 🇺🇲 qn-US
+  - name: Apple
+    type: select
+    proxies:
+      - DIRECT
+      - Proxy
+      - 🇺🇲 qn
+      - 🇺🇲 s3
+      - 🇺🇲 s2
+      - 🇺🇲 s12
+      - 🇺🇲 mc
+      - 🇺🇲 s3-US
+      - 🇺🇲 s9-US
+      - 🇺🇲 s12-US
+      - 🇺🇲 s2-US
+      - 🇺🇲 qn-US
+  - name: Onedrive
+    type: select
+    proxies:
+      - DIRECT
+      - Proxy
+      - 🇺🇲 qn
+      - 🇺🇲 s3
+      - 🇺🇲 s2
+      - 🇺🇲 s12
+      - 🇺🇲 mc
+      - 🇺🇲 s3-US
+      - 🇺🇲 s9-US
+      - 🇺🇲 s12-US
+      - 🇺🇲 s2-US
+      - 🇺🇲 qn-US
+  - name: Twitch
+    type: select
+    proxies:
+      - DIRECT
+      - Proxy
+      - 🇺🇲 qn
+      - 🇺🇲 s3
+      - 🇺🇲 s2
+      - 🇺🇲 s12
+      - 🇺🇲 mc
+      - 🇺🇲 s3-US
+      - 🇺🇲 s9-US
+      - 🇺🇲 s12-US
+      - 🇺🇲 s2-US
+      - 🇺🇲 qn-US
+    
+  - name: Game
+    type: select
+    proxies:
+      - DIRECT
+      - Proxy
+      - 🇺🇲 qn
+      - 🇺🇲 s3
+      - 🇺🇲 s2
+      - 🇺🇲 s12
+      - 🇺🇲 mc
+      - 🇺🇲 s3-US
+      - 🇺🇲 s9-US
+      - 🇺🇲 s12-US
+      - 🇺🇲 s2-US
+      - 🇺🇲 qn-US
+      - 🇦🇷 AR Buenos Aires
+      - 🇧🇷 BR Sao Paulo
+      - 🇹🇷 TR Istanbul
+      - 🇹🇷 TR Bursa
+      - 🇷🇺 RU Moscow
+      - 🇷🇺 RU St. Petersburg
+
+  - name: Load-balance
+    type: load-balance
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - 🇺🇲 qn
+      - 🇺🇲 s3
+      - 🇺🇲 s2
+      - 🇺🇲 s12
+      - 🇺🇲 mc
+      - 🇺🇲 s3-US
+      - 🇺🇲 s9-US
+      - 🇺🇲 s12-US
+      - 🇺🇲 s2-US
+      - 🇺🇲 qn-US
+      # strategy: consistent-hashing # or round-robin
+  - name: Fallback
+    type: fallback
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - 🇺🇲 qn
+      - 🇺🇲 s3
+      - 🇺🇲 s2
+      - 🇺🇲 s12
+      - 🇺🇲 mc
+      - 🇺🇲 s3-US
+      - 🇺🇲 s9-US
+      - 🇺🇲 s12-US
+      - 🇺🇲 s2-US
+      - 🇺🇲 qn-US
+  - name: AutoTest
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - 🇺🇲 qn
+      - 🇺🇲 s3
+      - 🇺🇲 s2
+      - 🇺🇲 s12
+      - 🇺🇲 mc
+      - 🇺🇲 s3-US
+      - 🇺🇲 s9-US
+      - 🇺🇲 s12-US
+      - 🇺🇲 s2-US
+      - 🇺🇲 qn-US
+
+  - name: Relay1
+    type: relay
+    proxies:
+      - 🇺🇲 s3-US
+      - 🇦🇷 AR Buenos Aires
+  - name: Relay2
+    type: relay
+    proxies:
+      - 🇺🇲 s3-US
+      - http1
+  - name: Relay3
+    type: relay
+    proxies:
+      - 🇺🇲 s3-US
+      - US 🇺🇸 Dallas 2
+
+
+rule-providers:
+# name: # Provider 名称
+#   type: http # http 或 file
+#   behavior: classical # 或 ipcidr、domain
+#   path: # 文件路径
+#   url: # 只有当类型为 HTTP 时才可用，您不需要在本地空间中创建新文件。
+#   interval: # 自动更新间隔，仅在类型为 HTTP 时可用
+
+  Unbreak:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Unbreak.yaml
+    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Unbreak.yaml
+    interval: 86400
+
+  Hijacking:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Hijacking.yaml
+    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Guard/Hijacking.yaml
+    interval: 86400
+
+  Paypal:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Extra/Paypal.yaml
+    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Extra/PayPal.yaml
+    interval: 86400
+
+  Apple:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Extra/Apple.yaml
+    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Extra/Apple/Apple.yaml
+    interval: 86400
+
+  Onedrive:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Extra/Onedrive.yaml
+    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Extra/Microsoft/OneDrive.yaml
+    interval: 86400
+
+  Twitch:
+    type: http
+    behavior: classical
+    path: ./RuleSet/StreamingMedia/Twitch.yaml
+    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/StreamingMedia/Live/Twitch.yaml
+    interval: 86400
+
+  Streaming:
+    type: http
+    behavior: classical
+    path: ./RuleSet/StreamingMedia/Streaming.yaml
+    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/StreamingMedia/Streaming.yaml
+    interval: 86400
+
+  StreamingSE:
+    type: http
+    behavior: classical
+    path: ./RuleSet/StreamingMedia/StreamingSE.yaml
+    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/StreamingMedia/StreamingSE.yaml
+    interval: 86400
+
+  Global:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Global.yaml
+    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Global.yaml
+    interval: 86400
+
+  China:
+    type: http
+    behavior: classical
+    path: ./RuleSet/China.yaml
+    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/China.yaml
+    interval: 86400
+
+  ChinaIP:
+    type: http
+    behavior: ipcidr
+    path: ./RuleSet/Extra/ChinaIP.yaml
+    url: https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/Extra/ChinaIP.yaml
+    interval: 86400
+
+rules:
+  - DOMAIN-SUFFIX,restream.io,DIRECT,DIRECT
+  - PROCESS-NAME,obs64.exe,DIRECT,DIRECT
+  - PROCESS-NAME,v2ray,DIRECT,DIRECT
+  - PROCESS-NAME,ss-local,DIRECT,DIRECT
+  - PROCESS-NAME,aria2c,DIRECT,DIRECT
+  - PROCESS-NAME,fdm,DIRECT,DIRECT
+  - PROCESS-NAME,Folx,DIRECT,DIRECT
+  - PROCESS-NAME,NetTransport,DIRECT,DIRECT
+  - PROCESS-NAME,Thunder,DIRECT,DIRECT
+  - PROCESS-NAME,Transmission,DIRECT,DIRECT
+  - PROCESS-NAME,uTorrent,DIRECT,DIRECT
+  - PROCESS-NAME,WebTorrent,DIRECT,DIRECT
+  - PROCESS-NAME,WebTorrent Helper,DIRECT,DIRECT
+ 
+  # Unbreak
+  - RULE-SET,Unbreak,DIRECT
+  
+  # Hijacking
+  - RULE-SET,Hijacking,REJECT
+  
+  # Global Area Network
+  
+  # Advertising
+  - DOMAIN-KEYWORD,adservice,REJECT
+  - DOMAIN-SUFFIX,ad.com,REJECT
+ 
+  # Paypal
+  - RULE-SET,Paypal,Paypal
+ 
+  # Apple
+  - RULE-SET,Apple,Apple
+
+  # Onedrive
+  - RULE-SET,Onedrive,Onedrive
+  
+  # Twitch
+  - RULE-SET,Twitch,Twitch
+
+  # (Streaming Media)
+  - RULE-SET,Streaming,Streaming
+
+  # (StreamingSE)
+  - RULE-SET,StreamingSE,StreamingSE
+
+  # (DNS Cache Pollution) / (IP Blackhole) / (Region-Restricted Access Denied) / (Network Jitter)
+  - RULE-SET,Global,Proxy
+
+  # China Area Network
+  - RULE-SET,China,DIRECT
+
+  # Local Area Network
+  - IP-CIDR,192.168.0.0/16,DIRECT
+  - IP-CIDR,10.0.0.0/8,DIRECT
+  - IP-CIDR,172.16.0.0/12,DIRECT
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - IP-CIDR,100.64.0.0/10,DIRECT
+  - IP-CIDR,224.0.0.0/4,DIRECT
+  - IP-CIDR,fe80::/10,DIRECT
+
+  # （可选）使用来自 ipipdotnet 的 ChinaIP 以解决数据不准确的问题，使用 ChinaIP.yaml 时可禁用下列直至（包括）「GEOIP,CN」规则
+  # - RULE-SET,ChinaIP,DIRECT
+  # Tencent
+  - IP-CIDR,119.28.28.28/32,DIRECT
+  - IP-CIDR,182.254.116.0/24,DIRECT
+  # GeoIP China
+  - GEOIP,CN,DIRECT
+
+  - MATCH,MATCH
+ 
+ 
+ 
+ 
+ 
