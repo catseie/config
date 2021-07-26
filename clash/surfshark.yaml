@@ -531,7 +531,7 @@ proxy-groups:
     interval: 300
     use:
       - ar
-  - name: - 🇧🇷 Brazil 
+  - name: 🇧🇷 Brazil 
     type: url-test
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
