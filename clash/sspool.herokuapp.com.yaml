@@ -235,6 +235,14 @@ proxy-providers:
       enable: true
       interval: 600
       url: http://www.gstatic.com/generate_204
+  br:
+    type: http
+    url: "https://sspool.herokuapp.com/clash/proxies?c=BR&type=ss,ssr,vmess,trojan"
+    path: sspool.herokuapp.comss.tk/provider-br.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
   tr:
     type: http
     url: "https://sspool.herokuapp.com/clash/proxies?c=TR&type=ss,ssr,vmess,trojan"
@@ -309,7 +317,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
   others:
     type: http
-    url: "https://sspool.herokuapp.com/clash/proxies?nc=CN,HK,TW,US,CA,JP,SG,AU,CH,DE,GB,NL,FR,RU,ES,TR,AR&speed=5&type=ss,ssr,vmess,trojan"
+    url: "https://sspool.herokuapp.com/clash/proxies?nc=CN,HK,TW,US,CA,JP,SG,AU,CH,DE,GB,NL,FR,RU,ES,TR,AR,BR&speed=5&type=ss,ssr,vmess,trojan"
     path: sspool.herokuapp.comss.tk/provider-others.yaml
     health-check:
       enable: true
@@ -398,6 +406,7 @@ proxy-groups:
       - 🇨🇦 Canada
       - 🇷🇺 Russia
       - 🇦🇷 Argentina
+      - 🇧🇷 Brazil 
       - 🇹🇷 Turkey
       - 🇦🇺 Australia
       - 🇨🇭 Switzerland
@@ -419,6 +428,7 @@ proxy-groups:
       - 🇨🇦 Canada
       - 🇷🇺 Russia
       - 🇦🇷 Argentina
+      - 🇧🇷 Brazil 
       - 🇹🇷 Turkey
       - 🇦🇺 Australia
       - 🇨🇭 Switzerland
@@ -440,6 +450,7 @@ proxy-groups:
       - 🇨🇦 Canada
       - 🇷🇺 Russia
       - 🇦🇷 Argentina
+      - 🇧🇷 Brazil 
       - 🇹🇷 Turkey
       - 🇦🇺 Australia
       - 🇨🇭 Switzerland
@@ -469,6 +480,7 @@ proxy-groups:
       - 🇺🇸 USA
       - 🇨🇦 Canada
       - 🇦🇷 Argentina
+      - 🇧🇷 Brazil 
       - 🇹🇷 Turkey
       - 🇷🇺 Russia
       - 🇦🇺 Australia
