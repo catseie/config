@@ -238,6 +238,14 @@ proxy-providers:
       enable: true
       interval: 600
       url: http://www.gstatic.com/generate_204
+  br:
+    type: http
+    url: "https://pub-api-1.bianyuan.xyz/sub?target=clash&url=https%3A%2F%2Fraw.githubusercontent.com%2Fclashconfig%2Fonline%2Fmain%2FSurfShark(44236).yml&insert=false&include=BR&filename=surfsharknode&emoji=true&list=true&tfo=false&scv=false&fdn=false&sort=false&new_name=true"
+    path: surfshark/provider-br.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
   tr:
     type: http
     url: "https://pub-api-1.bianyuan.xyz/sub?target=clash&url=https%3A%2F%2Fraw.githubusercontent.com%2Fclashconfig%2Fonline%2Fmain%2FSurfShark(44236).yml&insert=false&include=TR&filename=surfsharknode&emoji=true&list=true&tfo=false&scv=false&fdn=false&sort=false&new_name=true"
@@ -401,6 +409,7 @@ proxy-groups:
       - 🇨🇦 Canada
       - 🇷🇺 Russia
       - 🇦🇷 Argentina
+      - 🇧🇷 Brazil 
       - 🇹🇷 Turkey
       - 🇦🇺 Australia
       - 🇨🇭 Switzerland
@@ -422,6 +431,7 @@ proxy-groups:
       - 🇨🇦 Canada
       - 🇷🇺 Russia
       - 🇦🇷 Argentina
+      - 🇧🇷 Brazil 
       - 🇹🇷 Turkey
       - 🇦🇺 Australia
       - 🇨🇭 Switzerland
@@ -472,6 +482,7 @@ proxy-groups:
       - 🇺🇸 USA
       - 🇨🇦 Canada
       - 🇦🇷 Argentina
+      - 🇧🇷 Brazil 
       - 🇹🇷 Turkey
       - 🇷🇺 Russia
       - 🇦🇺 Australia
@@ -519,6 +530,12 @@ proxy-groups:
     interval: 300
     use:
       - ar
+  - name: - 🇧🇷 Brazil 
+    type: url-test
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+    use:
+      - br
   - name: 🇹🇷 Turkey
     type: url-test
     url: 'http://www.gstatic.com/generate_204'
